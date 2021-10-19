@@ -236,9 +236,8 @@ main(void)
 		t2 = gettemperature("/sys/devices/virtual/hwmon/hwmon4", "temp1_input");
 		volume = get_vol();
 
-		status = smprintf("T:%s|%s|%s L:%s B:%s|%s A:%s U:%s %s| V: %d",
-				t0, t1, t2, avgs, bat, bat1, tmar, tmutc,
-				tmbln, volume);
+		status = smprintf("   %s   %s   %d",
+				    bat, tmbln, volume);
 		setstatus(status);
 
 		free(t0);
