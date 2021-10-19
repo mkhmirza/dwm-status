@@ -18,9 +18,9 @@
 #include <X11/Xlib.h>
 #include <alsa/asoundlib.h>
 #include <alsa/control.h>
-char *tzargentina = "America/Buenos_Aires";
-char *tzutc = "UTC";
-char *tzberlin = "Europe/Berlin";
+char *tzargentina = "Pakistan/Karachi";
+char *tzutc = "PKT";
+char *tzberlin = "Asia/Karachi";
 
 static Display *dpy;
 
@@ -217,6 +217,7 @@ main(void)
 	char *tmutc;
 	char *tmbln;
 	char *t0, *t1, *t2;
+	int *volume;
 
 	if (!(dpy = XOpenDisplay(NULL))) {
 		fprintf(stderr, "dwmstatus: cannot open display.\n");
